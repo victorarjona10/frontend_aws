@@ -1,0 +1,220 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+}
+
+.large {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.square-grid {
+  display: inline-grid;
+  gap: 5px;
+  grid-auto-flow: column;
+}
+
+.text-xl {
+  color: #61dafb;
+  font-size: 1rem;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+.homeWrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f6fa 0%, #e0e7ff 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.homeMapContainer {
+  width: 95vw;
+  max-width: 100vw;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  background: #fff;
+  overflow: hidden;
+   box-sizing: border-box;
+   padding: 0;
+}
+
+.heroSection {
+  text-align: center;
+  padding: 4rem 1rem 2rem 1rem;
+  background: linear-gradient(90deg, #2563eb 60%, #4f8cff 100%);
+  color: #fff;
+}
+
+.heroLogo {
+  width: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e0e7ff;
+}
+
+.ctaButton {
+  background: #fff;
+  color: #2563eb;
+  padding: 0.9rem 2.2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #2563eb33;
+  transition: background 0.2s, color 0.2s;
+}
+.ctaButton:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.featuresSection {
+  padding: 3rem 1rem 2rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.featuresGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.featureCard {
+  background: #f3f6fd;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  width: 260px;
+  box-shadow: 0 2px 8px #2563eb11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.statsSection {
+  background: #e0e7ff;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+.statsGrid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px #2563eb11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1.2rem 0;
+  background: #2563eb;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.mapContainer{
+  background-color: #2563eb;
+}
+
+@media (max-width: 700px) {
+  .statsGrid {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .statCard {
+    width: 90vw;
+    max-width: 350px;
+  }
+  .homeMapContainer {
+    width: 98vw;
+    max-width: 100vw;
+    margin: 0 1vw;
+    border-radius: 10px;
+    padding: 0;
+  }
+}

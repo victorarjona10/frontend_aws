@@ -1,0 +1,279 @@
+.perfil-container {
+    flex: 1; /* Permite que el perfil ocupe el mismo espacio que las órdenes */
+    max-width: 400px; /* Ancho máximo del perfil */
+    width: 90%;
+    padding: 20px;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+}
+
+.perfil-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 3px solid #4c87af;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.perfil-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .perfil-container {
+    max-width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Reduce el padding */
+  }
+
+  .perfil-avatar {
+    width: 80px; /* Reduce el tamaño del avatar */
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .perfil-name {
+    font-size: 1.5rem; /* Reduce el tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+  }
+
+  .perfil-email,
+  .perfil-phone,
+  .perfil-wallet,
+  .perfil-description {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+  }
+
+  .perfil-divider {
+    margin: 10px 0; /* Reduce el margen */
+  }
+
+  .perfil-status {
+    font-size: 1rem; /* Reduce el tamaño de la fuente */
+    padding: 5px 8px; /* Reduce el padding */
+  }
+}
+
+.perfil-email, .perfil-phone, .perfil-wallet, .perfil-description, .perfil-flag {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
+}
+
+.perfil-email strong, .perfil-phone strong, .perfil-wallet strong, .perfil-description strong, .perfil-flag strong {
+    color: #4c87af;
+}
+
+.perfil-divider {
+    margin: 15px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.perfil-status {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4c87af;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.perfil-status.inactive {
+    background-color: #f44336;
+}
+
+.perfil-input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.perfil-textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+    height: 80px;
+}
+
+.perfil-actions {
+    margin-top: 20px;
+    
+}
+
+.perfil-buttons{
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.perfil-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.perfil-button:hover {
+    background-color: #45a049;
+}
+
+.perfil-home {
+    margin-top: 20px; /* Añade un margen superior para separar los botones */
+    text-align: left;
+}
+
+.perfil-wrapper {
+    display: flex; /* Usa Flexbox para alinear los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    gap: 20px; /* Espacio entre el perfil y las órdenes recientes */
+    background-color: #f5f5f5; /* Fondo claro para toda la página */
+}
+
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .perfil-wrapper {
+    flex-direction: column; /* Cambia a diseño vertical */
+    gap: 10px; /* Reduce el espacio entre elementos */
+    height: auto; /* Permite que el contenido crezca dinámicamente */
+    padding: 10px; /* Agrega padding para evitar que el contenido toque los bordes */
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.orders-container {
+    flex: 1; /* Permite que las órdenes ocupen el mismo espacio que el perfil */
+    max-width: 500px; /* Ancho máximo de las órdenes */
+    padding: 20px;
+
+   
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+}
+
+
+.order-item {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
+.profilePage {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarButton {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 1rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebarButton:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.sidebarButton.active {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+
+
+
+.tabs {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    border-right: 2px solid #e5e7eb; /* Línea divisoria vertical */
+    margin-right: 1rem; /* Espaciado a la derecha */
+    padding-right: 1rem; /* Espaciado interno a la derecha */
+  }
+  
+  .tabButton {
+    /* flex: 1; */
+    padding: 0.75rem 1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1rem;
+    color: #374151;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    text-align: left;;
+  }
+  
+  .tabButton:hover {
+    color: #2563eb;
+  }
+  
+  .tabButton.active {
+    border-bottom: 2px solid #2563eb;
+    color: #2563eb;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .secondary-content {
+      display: none; /* Oculta contenido secundario */
+    }
+  }

@@ -1,0 +1,554 @@
+/* --- Tabs --- */
+.tabsNav {
+  display: flex;
+  flex-wrap: nowrap; /* No saltar de línea */
+  overflow-x: auto;  /* Scroll horizontal */
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  scrollbar-width: thin; /* Opcional: scroll más fino en Firefox */
+}
+
+/* Opcional: quitar el scroll feo en Chrome */
+.tabsNav::-webkit-scrollbar {
+  height: 4px;
+  background: #e5e7eb;
+}
+.tabsNav::-webkit-scrollbar-thumb {
+  background: #bfc7d1;
+  border-radius: 2px;
+}
+
+.tabButton {
+  flex: 0 0 auto; /* No crecer, no encoger, ancho automático */
+  min-width: 110px; /* O el ancho que prefieras */
+  padding: 12px 16px;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s, border-bottom 0.2s, color 0.2s;
+  white-space: nowrap; /* No saltar línea en el texto */
+}
+
+.tabButton.active {
+  border-bottom: 2.5px solid #2563eb;
+  color: #2563eb;
+  background: #e0e7ff;
+}
+
+.tabButton:hover {
+  background: #e0e7ff;
+  color: #2563eb;
+}
+
+.tabContentUnified {
+  flex: 1;
+  padding: 24px 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive para móvil */
+@media (max-width: 600px) {
+  .tabContentUnified {
+    padding: 12px 2vw;
+  }
+  .tabsNav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tabButton {
+    font-size: 0.95rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+/* --- Productos --- */
+.companyProducts {
+  margin-top: 24px;
+}
+
+.productForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.productItem {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 #e5e7eb33;
+  padding: 18px 16px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.productItem:hover {
+  box-shadow: 0 4px 16px 0 #2563eb22;
+  border-color: #2563eb55;
+}
+
+.productItem strong {
+  font-size: 1.1rem;
+  color: #2563eb;
+}
+
+.productItem button {
+  align-self: flex-end;
+  padding: 7px 18px;
+  background: linear-gradient(90deg, #2563eb 60%, #4f8cff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 6px 0 #2563eb22;
+  margin-top: 8px;
+}
+
+.productItem button:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Formulario de edición de producto */
+.editProductForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f3f6fd;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1.5px solid #2563eb33;
+  margin-top: 8px;
+}
+
+.editProductForm input,
+.editProductForm textarea {
+  padding: 8px;
+  border: 1px solid #bfc7d1;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.editProductForm input:focus,
+.editProductForm textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.editProductForm label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.editProductForm button {
+  width: fit-content;
+  margin-top: 6px;
+}
+
+/* --- Órdenes --- */
+.companyOrders {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.companyOrders h3 {
+  margin-bottom: 12px;
+  color: #2563eb;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  border-left: 4px solid #2563eb;
+  padding-left: 10px;
+  background: #f3f6fd;
+  border-radius: 4px;
+}
+
+.companyOrders ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orderItem {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 #e5e7eb33;
+  padding: 18px 16px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: box-shadow 0.2s;
+}
+
+.orderItem:hover {
+  box-shadow: 0 4px 16px 0 #2563eb22;
+  border-color: #2563eb55;
+}
+
+.orderActionButton {
+  margin-top: 10px;
+  align-self: flex-end;
+  padding: 7px 18px;
+  background: linear-gradient(90deg, #2563eb 60%, #4f8cff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 6px 0 #2563eb22;
+}
+
+.orderActionButton:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* --- Otros --- */
+.companyAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.companyPhoto {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photoGallery {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Success y error */
+.success {
+  color: #22c55e;
+  background: #e7fbe9;
+  border: 1px solid #22c55e;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.error {
+  color: #ef4444;
+  background: #fbe7e7;
+  border: 1px solid #ef4444;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Responsive para móvil */
+@media (max-width: 600px) {
+  .tabContentUnified {
+    padding: 12px 2vw;
+  }
+  .tabsNav {
+    flex-direction: row !important; /* Fuerza horizontal */
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    /* Opcional: padding para que no se corte el scroll */
+    padding-bottom: 2px;
+  }
+  .tabButton {
+    min-width: 110px;
+    font-size: 0.95rem;
+    padding: 10px 0;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  .companyOrders {
+    gap: 20px;
+    margin-top: 12px;
+  }
+  .orderItem {
+    padding: 12px 8px;
+    font-size: 0.97rem;
+  }
+  .companyOrders h3 {
+    font-size: 1.05rem;
+    padding-left: 7px;
+  }
+  .productItem {
+    padding: 12px 8px;
+    font-size: 0.97rem;
+  }
+  .editProductForm {
+    padding: 10px;
+    font-size: 0.97rem;
+  }
+}
+
+body {
+  background: #f5f6fa;
+  color: #374151;
+}
+
+.createProductButton {
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #2563eb 60%, #4f8cff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px 0 #2563eb22;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.createProductButton:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+html, body {
+  background: #f5f6fa !important;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.productInfoRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.productAvatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2563eb22;
+  background: #f3f6fd;
+}
+
+.productDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.productName {
+  font-size: 1.1rem;
+  color: #2563eb;
+  margin: 0;
+}
+
+.productPrice {
+  color: #374151;
+  margin: 0;
+}
+
+.productStock {
+  color: #4b5563;
+  margin: 0;
+}
+
+.productRating {
+  margin-top: 2px;
+}
+
+.filledStar {
+  color: #fbbf24;
+  font-size: 1.1rem;
+}
+
+.emptyStar {
+  color: #d1d5db;
+  font-size: 1.1rem;
+}
+
+.editButton {
+  padding: 7px 18px;
+  background: linear-gradient(90deg, #2563eb 60%, #4f8cff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 6px 0 #2563eb22;
+}
+
+.editButton:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+
+.photoGalleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.photoGalleryItem {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f3f6fd;
+  box-shadow: 0 2px 8px 0 #e5e7eb33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+
+.photoGalleryItem:hover {
+  box-shadow: 0 4px 16px 0 #2563eb22;
+}
+
+.galleryPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.photoGalleryItem:hover .galleryPhoto {
+  transform: scale(1.05);
+}
+
+
+.fabUploadPhoto {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #2563eb 60%, #4f8cff 100%);
+  color: #fff;
+  font-size: 2.2rem;
+  border: none;
+  box-shadow: 0 4px 16px #2563eb44;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.fabUploadPhoto:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  transform: scale(1.07);
+}
+
+.deletePhotoButton {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  color: #ef4444;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background 0.2s, color 0.2s;
+}
+
+.deletePhotoButton:hover {
+  background: #ef4444;
+  color: #fff;
+}
+.photoGalleryItem {
+  position: relative; /* Asegúrate de que el botón se posicione bien */
+}
+
+.followersList {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.followerItem {
+  display: flex;
+  align-items: center;
+  background: #f4f6fb;
+  border-radius: 12px;
+  padding: 0.75rem 1.2rem;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+  transition: background 0.2s;
+}
+
+.followerItem:hover {
+  background: #e0e7ff;
+}
+
+.followerAvatar {
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 2px solid #2563eb;
+  background: #fff;
+  object-fit: cover;
+}
+
+.followerName {
+  font-weight: 600;
+  color: #2563eb;
+  margin-right: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.followerEmail {
+  color: #64748b;
+  font-size: 0.97rem;
+  word-break: break-all;
+}

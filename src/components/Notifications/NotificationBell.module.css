@@ -1,0 +1,146 @@
+.notificationContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.bellButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.bellButton:hover {
+  transform: scale(1.2);
+}
+
+.bellIcon {
+  font-size: 1.4rem;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.notificationPanel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: -10px;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+  color: #333;
+}
+
+.notificationHeader {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  background-color: #f8f9fa;
+}
+
+.notificationHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.notificationContent {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.emptyNotification {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .notificationPanel {
+    width: 250px;
+    right: -70px;
+  }
+
+  .notificationPanel::before {
+    right: 75px;
+  }
+}
+
+.bellContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.bellButton {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.bellButton:hover {
+  transform: scale(1.2);
+}
+
+.bellIcon {
+  font-size: 1.5rem;
+}
+
+.notificationCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.notificationIndicator {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #ef4444;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+}

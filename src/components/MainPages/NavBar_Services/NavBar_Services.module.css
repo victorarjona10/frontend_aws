@@ -1,0 +1,926 @@
+.servicesPageContainer {
+  min-height: 200vh; /* Asegura que hay suficiente altura para scroll */
+}
+
+
+
+
+
+/* Primera sección - Con el texto principal */
+.topSection {
+  height: 100%; /* Altura completa de la ventana */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color:   #1e293b;
+  position: relative;
+  min-height: 180px;   
+
+}
+
+.servicesTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.servicesDescription {
+  max-width: 1200px;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  width: 100%;
+
+}
+
+/* Indicador de scroll */
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.scrollArrow {
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid #e0e0e0;
+  border-right: 3px solid #e0e0e0;
+  transform: rotate(45deg);
+  margin: 20px auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  40% {
+    transform: rotate(45deg) translateY(-20px);
+  }
+  60% {
+    transform: rotate(45deg) translateY(-10px);
+  }
+}
+
+/* Segunda sección - Con fondo azul */
+.bottomSection {
+  height: 100vh; /* Altura completa de la ventana */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #1e40af; /* Fondo azul */
+  color: white;
+
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+.animatedContent {
+  text-align: center;
+  max-width: 800px;
+}
+
+.bottomSectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+  width: 100%;
+  max-width: 1000px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .bottomSectionTitle {
+    font-size: 2rem;
+    max-width: 90vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .bottomSectionText {
+    max-width: 98vw; /* O 100vw, para que nunca se corte */
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 1.2rem; /* Ajusta el tamaño para móviles */
+  }
+}
+
+.bottomSectionText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #e0e0e0;
+  width: 100%;
+  max-width: 1000px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bottomSection {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.bottomSectionTitle,
+.bottomSectionText {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .bottomSectionTitle,
+  .bottomSectionText {
+    max-width: 98vw; /* O 100vw, para que nunca se corte */
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 1.2rem; /* Ajusta el tamaño para móviles */
+  }
+}
+
+.companyButton {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.companyButton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mantén los ajustes para Leaflet */
+.leaflet-container {
+  z-index: 90; /* Menor que la navbar */
+}
+
+.leaflet-control {
+  z-index: 800; /* Mayor que el mapa pero menor que la navbar */
+}
+
+.leaflet-popup {
+  z-index: 700; /* Similar para popups */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 2rem;
+
+  
+}
+
+@media (max-width: 700px) {
+  .buttonContainer {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  /* Opcional: haz que los botones ocupen todo el ancho */
+  .companyButton, .leftButton, .rightButton {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+.leftButton,
+.rightButton {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+}
+
+.leftButton {
+  margin-right: 1rem;
+}
+
+.rightButton {
+  margin-left: 1rem;
+  background-color: #10b981; /* Verde diferente para distinguir */
+}
+
+@media (max-width: 700px) {
+  .buttonContainer {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .companyButton, .leftButton, .rightButton {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.leftButton:hover,
+.rightButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.rightButton:hover {
+  background-color: #059669; /* Verde más oscuro al hover */
+}
+
+/* Tercera sección */
+.thirdSection {
+  min-height: 100vh;
+  background-color: #0f172a; /* Azul más oscuro para la tercera sección */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.thirdSectionContent {
+  max-width: 1000px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos del formulario */
+.addCompanyForm h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.formGroup textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.submitButton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.viewCompaniesPlaceholder {
+  text-align: center;
+  color: white;
+  padding: 3rem 0;
+}
+
+.viewCompaniesPlaceholder h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.viewCompaniesPlaceholder p {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.switchOption {
+  margin-bottom: 2rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  transition: color 0.3s;
+}
+
+.linkButton:hover {
+  color: #60a5fa;
+}
+
+.existingCompaniesContainer {
+  width: 100%;
+}
+
+.companiesTableWrapper {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.5rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.companiesTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: white;
+}
+
+.companiesTable th,
+.companiesTable td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.companiesTable th {
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.companiesTable tr:last-child td {
+  border-bottom: none;
+}
+
+.companiesTable tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.descriptionCell {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.actionButtons {
+  white-space: nowrap;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.updateButton,
+.addProductButton {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.updateButton {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.updateButton:hover {
+  background-color: #2563eb;
+}
+
+.addProductButton {
+  background-color: #10b981;
+  color: white;
+}
+
+.addProductButton:hover {
+  background-color: #059669;
+}
+
+.updateCompanyForm,
+.addProductForm {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.addProductForm {
+  border-left-color: #10b981;
+}
+
+.updateCompanyForm h4,
+.addProductForm h4 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.cancelButton {
+  margin-left: 1rem;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancelButton:hover {
+  background-color: #4b5563;
+}
+
+.viewCompaniesContainer {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.viewCompaniesContainer h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth; /* Hace todas las transiciones de scroll suaves */
+}
+
+.updateCompanyForm,
+.addProductForm {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+  scroll-margin-top: 20px; /* Da un margen al hacer scroll */
+  transition: opacity 0.3s ease-in; /* Transición suave de opacidad */
+}
+
+.centerButtonCell {
+  text-align: center; /* Centra horizontalmente */
+  vertical-align: middle; /* Centra verticalmente */
+}
+
+.actionButton {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  background-color: #0056b3;
+}
+
+.followButton {
+  background-color: #007bff; /* Azul */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.followButton:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+.unfollowButton {
+  background-color: #6c757d; /* Gris */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unfollowButton:hover {
+  background-color: #5a6268; /* Gris más oscuro */
+}
+
+
+
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.serviceCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.serviceIconWrapper {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.serviceIconBlue {
+  background-color: #3b82f6;
+}
+
+.serviceIconGreen {
+  background-color: #10b981;
+}
+
+.serviceIconPurple {
+  background-color: #8b5cf6;
+}
+
+.serviceIconAmber {
+  background-color: #d97706;
+}
+
+.serviceIcon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.serviceTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.serviceDescription {
+  color: #bfdbfe;
+  line-height: 1.5;
+}
+
+/* Carrusel de imágenes */
+.carouselContainer {
+  flex: 0 0 60%;
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.carouselContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.carouselImageContainer {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carouselImage {
+  max-height: 550px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carouselDot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.carouselDotActive {
+  background-color: white;
+}
+
+/* Call to Action */
+.ctaContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButton {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.downloadSection {
+  flex: 0 0 35%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.downloadTitle {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.downloadButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  gap: 8px;
+  width: 100%;
+  border: none;
+}
+
+.downloadButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.downloadIcon {
+  font-size: 1.3rem;
+}
+
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .carouselContent {
+    flex-direction: column;
+  }
+
+  .carouselImageContainer,
+  .downloadSection {
+    flex: 1 1 auto;
+  }
+
+  .carouselImage {
+    max-height: 400px;
+  }
+
+  .downloadButtons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.mediaSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 12rem;
+}
+.downloadSectionStandalone {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .mediaSection {
+    flex-direction: column;
+  }
+
+  .carouselContainer,
+  .downloadSectionStandalone {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
+
+.errorMessage {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border-left: 4px solid #d32f2f;
+  font-size: 0.9rem;
+}
+
+.successMessage {
+  background-color: rgba(0, 128, 0, 0.1);
+  color: #388e3c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border-left: 4px solid #388e3c;
+  font-size: 0.9rem;
+}
+
+/* Estilos para elementos durante carga */
+.submitButton:disabled,
+.cancelButton:disabled,
+input:disabled,
+textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.manageButton {
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manageButton:hover {
+  background-color: #7c3aed;
+}
+
+.passwordVerificationForm {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  border-left: 4px solid #8b5cf6;
+  scroll-margin-top: 20px;
+  transition: opacity 0.3s ease-in;
+}
+
+/* Añadir estos estilos al final del archivo */
+
+.verificationDescription {
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.passwordVerificationForm input[type="password"] {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 0.3s;
+}
+
+.passwordVerificationForm input[type="password"]:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}

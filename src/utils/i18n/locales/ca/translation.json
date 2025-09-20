@@ -1,0 +1,317 @@
+{
+    "accessibility": {
+        "title": "Opcions d'Accessibilitat",
+        "button": "Accessibilitat",
+        "fontSize": "Mida de lletra",
+        "fontSizes": {
+            "normal": "Normal",
+            "large": "Gran",
+            "xlarge": "Extra gran"
+        },
+        "colorMode": "Mode de color",
+        "colorModes": {
+            "default": "Predeterminat",
+            "dark": "Fosc",
+            "highContrast": "Alt contrast",
+            "protanopia": "Protanopia (daltonisme vermell)",
+            "deuteranopia": "Deuteranopia (daltonisme verd)",
+            "tritanopia": "Tritanopia (daltonisme blau)"
+        },
+        "dyslexicFont": "Font per dislèxia",
+        "reducedMotion": "Reduir animacions",
+        "language": "Idioma",
+        "languages": {
+            "es": "Espanyol",
+            "en": "Anglès",
+            "ca": "Català"
+        },
+        "reset": "Restablir configuració"
+    },
+    "navbar": {
+        "profile": "Perfil",
+        "services": "Serveis",
+        "map": "Mapa",
+        "cart": "Carret",
+        "contact": "Contacte",
+        "logout": "Tancar sessió",
+        "notifications": "Notificacions"
+    },
+    "services": {
+        "title": "Per què escollir QuickFind?",
+        "description": "QuickFind connecta als compradors amb negocis locals, facilitant trobar exactament el que necessites a prop, estalviant temps i donant suport al comerç local.",
+        "scrollForMore": "Desplaça't per més informació",
+        "exploreTitle": "Explora les nostres empreses associades",
+        "exploreText": "Descobreix tots els negocis locals que formen part de la nostra xarxa. Des de restaurants fins a botigues especialitzades, tenim una àmplia varietat d'opcions per satisfer les teves necessitats.",
+        "viewCompanies": "Veure Empreses",
+        "manageCompanies": "Gestionar les teves empreses",
+        "addCompany": "Afegir Empresa",
+        "smartSearch": {
+            "title": "Cerca Intel·ligent de Productes",
+            "description": "Troba productes en múltiples botigues properes amb disponibilitat i preus en temps real."
+        },
+        "maps": {
+            "title": "Mapes Interactius",
+            "description": "Descobreix botigues en un mapa interactiu amb valoracions, ressenyes i indicacions."
+        },
+        "localBusiness": {
+            "title": "Visibilitat per a Negocis Locals",
+            "description": "Ajudem a petites empreses a augmentar la seva visibilitat i connectar amb clients locals."
+        },
+        "storeManagement": {
+            "title": "Gestió de Botigues",
+            "description": "Els propietaris poden actualitzar informació i gestionar inventari de productes fàcilment."
+        },
+        "download": {
+            "apple": "Descarregar per iOS",
+            "android": "Descarregar per Android"
+        }
+    },
+    "company": {
+        "management": {
+            "title": "Gestionar Empresa",
+            "passwordPrompt": "Si us plau, introdueix la contrasenya de l'empresa per accedir al panell de gestió",
+            "password": "Contrasenya",
+            "verify": "Verificar",
+            "cancel": "Cancel·lar",
+            "incorrectPassword": "Contrasenya incorrecta, torna-ho a provar",
+            "tabs": {
+                "details": "Detalls",
+                "products": "Productes",
+                "photos": "Fotos",
+                "map": "Mapa",
+                "reviews": "Ressenyes",
+                "orders": "Comandes",
+                "followers": "Seguidors"
+            }
+        },
+        "form": {
+            "name": "Nom de l'Empresa",
+            "description": "Descripció",
+            "location": "Ubicació",
+            "email": "Email",
+            "phone": "Telèfon",
+            "password": "Contrasenya (deixa-ho buit per mantenir l'actual)",
+            "update": "Actualitzar Empresa",
+            "create": "Crear Empresa",
+            "cancel": "Cancel·lar",
+            "updating": "Actualitzant...",
+            "creating": "Creant...",
+            "passwordPlaceholder": "Deixa-ho buit per mantenir la contrasenya actual"
+        },
+        "product": {
+            "form": {
+                "title": "Afegir Producte",
+                "name": "Nom del Producte",
+                "description": "Descripció",
+                "price": "Preu",
+                "add": "Afegir Producte",
+                "cancel": "Cancel·lar"
+            },
+            "list": {
+                "title": "Llista de Productes",
+                "noProducts": "No hi ha productes disponibles.",
+                "edit": "Editar",
+                "delete": "Eliminar",
+                "save": "Guardar",
+                "cancel": "Cancel·lar"
+            }
+        },
+        "photos": {
+            "title": "Fotos",
+            "noPhotos": "No hi ha fotos pujades encara.",
+            "upload": "Pujar foto",
+            "delete": "Eliminar foto"
+        },
+        "location": {
+            "title": "Ubicació al mapa"
+        },
+        "reviews": {
+            "title": "Ressenyes",
+            "noReviews": "No hi ha ressenyes disponibles."
+        },
+        "orders": {
+            "pending": "Comandes Pendents",
+            "processing": "Comandes Processant",
+            "completed": "Comandes Finalitzades",
+            "rejected": "Comandes Rebutjades",
+            "noPending": "No hi ha comandes pendents.",
+            "noProcessing": "No hi ha comandes processant.",
+            "noCompleted": "No hi ha comandes finalitzades.",
+            "noRejected": "No hi ha comandes rebutjades.",
+            "date": "Data",
+            "user": "Usuari",
+            "products": "Productes",
+            "quantity": "Quantitat",
+            "total": "Total comanda",
+            "actions": {
+                "process": "Passar a Processant",
+                "complete": "Passar a Finalitzada",
+                "reject": "Rebutjar",
+                "resume": "Reprendre Comanda"
+            }
+        },
+        "profile": {
+            "name": "Nom",
+            "description": "Descripció",
+            "email": "Email",
+            "phone": "Telèfon",
+            "location": "Ubicació",
+            "followers": "Seguidors",
+            "rating": "Valoració",
+            "userRatings": "valoracions",
+            "follow": "Seguir",
+            "unfollow": "Deixar de seguir"
+        }
+    },
+    "user": {
+        "profile": {
+            "loading": "Carregant dades de l'usuari...",
+            "notFound": "No s'ha trobat informació de l'usuari.",
+            "edit": "Editar Perfil",
+            "save": "Guardar Canvis",
+            "cancel": "Cancel·lar",
+            "name": "Nom",
+            "email": "Email",
+            "phone": "Telèfon",
+            "description": "Descripció",
+            "recentOrders": "Comandes Recents",
+            "noOrders": "No tens comandes recents.",
+            "following": "Seguint",
+            "followers": "Seguidors",
+            "noFollowing": "No segueixes cap usuari.",
+            "noFollowers": "No tens seguidors.",
+            "followedCompanies": "Empreses que segueixes",
+            "noCompanies": "No segueixes cap empresa."
+        }
+    },
+    "cart": {
+        "title": "Carret",
+        "summary": "Resum del Carret",
+        "total": "Preu Total",
+        "wallet": "Moneder",
+        "loading": "Carregant...",
+        "addMoney": "Afegir Diners",
+        "checkout": "Pagar Ara",
+        "empty": "El teu carret està buit",
+        "emptyText": "Afegeix productes des de les pàgines d'empreses",
+        "browseCompanies": "Veure Empreses",
+        "products": "Productes al Carret",
+        "perCompany": "Productes de {{company}}",
+        "removeProduct": "Eliminar",
+        "increaseQuantity": "Afegir un més",
+        "decreaseQuantity": "Treure un",
+        "price": "Preu"
+    },
+    "notifications": {
+        "title": "Notificacions",
+        "markAllRead": "Marcar tot com llegit",
+        "noNotifications": "No tens notificacions",
+        "unread": "No llegit"
+    },
+    "addMoney": {
+        "title": "Afegir Diners",
+        "currentBalance": "Saldo Actual",
+        "amount": "Quantitat a Afegir",
+        "add": "Afegir",
+        "cancel": "Cancel·lar"
+    },
+    "login": {
+        "title": "Iniciar Sessió",
+        "email": "Email",
+        "password": "Contrasenya",
+        "submit": "Entrar",
+        "register": "Crear Compte",
+        "forgotPassword": "Has oblidat la contrasenya?"
+    },
+    "register": {
+        "title": "Crear Compte",
+        "name": "Nom",
+        "email": "Email",
+        "password": "Contrasenya",
+        "confirmPassword": "Confirmar Contrasenya",
+        "submit": "Registrar-se",
+        "login": "Ja tens compte? Inicia sessió"
+    },
+    "errors": {
+        "required": "Aquest camp és obligatori",
+        "invalidEmail": "Email invàlid",
+        "passwordLength": "La contrasenya ha de tenir almenys 6 caràcters",
+        "passwordMatch": "Les contrasenyes no coincideixen",
+        "generic": "Ha ocorregut un error. Torna-ho a provar."
+    },
+    "success": {
+        "productAdded": "Producte afegit correctament",
+        "companyUpdated": "Empresa actualitzada correctament",
+        "orderCreated": "Comanda creada correctament",
+        "reviewSubmitted": "Gràcies per la teva ressenya!"
+    },
+    "common": {
+        "loading": "Carregant...",
+        "save": "Guardar",
+        "cancel": "Cancel·lar",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "submit": "Enviar",
+        "back": "Tornar",
+        "next": "Següent",
+        "yes": "Sí",
+        "no": "No",
+        "ok": "Acceptar",
+        "close": "Tancar",
+        "search": "Cercar",
+        "filter": "Filtrar",
+        "sort": "Ordenar",
+        "show": "Mostrar",
+        "hide": "Amagar",
+        "view": "Veure",
+        "add": "Afegir",
+        "remove": "Eliminar",
+        "create": "Crear",
+        "update": "Actualitzar",
+        "price": "Preu",
+        "quantity": "Quantitat",
+        "total": "Total",
+        "name": "Nom",
+        "description": "Descripció",
+        "image": "Imatge",
+        "location": "Ubicació",
+        "date": "Data",
+        "status": "Estat",
+        "actions": "Accions",
+        "noResults": "No s'han trobat resultats",
+        "notAvailable": "No disponible",
+        "rights": "Tots els drets reservats."
+    },
+    "home": {
+        "welcome": "Benvingut a QuickFind",
+        "subtitle": "Troba, compara i connecta amb empreses i serveis de la teva ciutat.",
+        "exploreButton": "Explorar empreses",
+        "whatCanYouDo": "Què pots fer?",
+        "searchCompanies": "Cercar empreses",
+        "searchDescription": "Filtra per sector i ubicació.",
+        "compareServices": "Comparar serveis",
+        "compareDescription": "Compara preus, productes i opinions reals.",
+        "contactEasily": "Contacte fàcil",
+        "contactDescription": "Contacta amb empreses directament des de la plataforma.",
+        "stats": "QuickFind en números",
+        "companies": "Empreses",
+        "users": "Usuaris",
+        "reviews": "Opinions",
+        "finder": "Cercador d'Empreses i Productes"
+    },
+    "map": {
+        "search2": "Cercar empresa",
+        "search1": "Cercar producte",
+        "search3": "Cercar empresas no registrades a QuickFind",
+        "noResults": "No s'han trobat resultats"
+    },
+    "contact": {
+        "title": "Contacte",
+        "name": "Nom",
+        "email": "Email",
+        "message": "Missatge",
+        "submit": "Enviar",
+        "success": "Missatge enviat correctament. Ens posarem en contacte amb tu aviat.",
+        "error": "Ha ocorregut un error en enviar el missatge. Torna-ho a provar."
+    }
+}

@@ -1,0 +1,90 @@
+.notificationListContainer {
+  position: absolute;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.notificationHeader h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+.notificationList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notificationItem {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eaeaea;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  transition: background-color 0.2s;
+}
+
+.notificationItem:hover {
+  background-color: #f9f9f9;
+}
+
+.notificationItem.unread {
+  background-color: #f0f7ff;
+}
+
+.notificationIcon {
+  margin-right: 12px;
+  font-size: 1.25rem;
+}
+
+.notificationContent {
+  flex: 1;
+}
+
+.notificationMessage {
+  margin: 0 0 4px 0;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.notificationTime {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.emptyNotifications {
+  padding: 16px;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}

@@ -1,0 +1,371 @@
+.mapWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  background: #e5e7eb;
+  justify-content: center;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 1rem 0; /* Solo padding arriba y abajo */
+}
+
+.searchBar {
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+.searchButton {
+  padding: 13px 20px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mapAndSidebar {
+  display: flex;
+  flex: 1;
+  position: relative;
+  font-size: 14px;
+}
+
+.mapContainer {
+  flex: 1;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 95vw;
+  height: 90vh;
+  border-radius: 18px;
+  margin: 0 auto;        /* Centra el mapa */
+  background: #fff;
+  transition: width 0.3s;
+  box-sizing: border-box;
+  max-width: 100vw;
+  display: flex;           /* <-- Añade esto */
+  flex-direction: column;  /* <-- Añade esto */
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: -400px;
+  width: 400px;
+  height: 100%;
+  max-height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow-y: auto;
+  transition: left 0.3s ease-out;
+  z-index: 1000;
+  border-radius: 15px 0 0 15px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h2,
+.sidebar p {
+  color: #333;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+p {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.iconImage {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.productCard {
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.productCard p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #d32f2f;
+}
+
+.reserveButton {
+  padding: 10px 15px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reserveButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.reserveButton:hover:not(:disabled) {
+  background-color: #1e4bb8;
+}
+
+.searchTypeSelect {
+  flex: 0.3; 
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.searchTypeSelect:focus {
+  border-color: #61dafb; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MapBarcelona.module.css */
+.floatingSearchBar {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  min-width: 0;
+  max-width: 95vw;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+.floatingSearchBar input,
+.floatingSearchBar select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.floatingSearchBar button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.floatingSearchBar button:hover {
+  background: #1e40af;
+}
+
+
+
+
+
+
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.13);
+  padding: 24px 20px 20px 20px;
+  overflow-y: auto;
+  z-index: 1002;
+  border-left: 1px solid #e5e7eb;
+  transition: right 0.3s;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.closeButton:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+
+/* Si usas react-leaflet o leaflet, fuerza el mapa a no sobresalir */
+.leaflet-container {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  max-width: 100vw !important;
+  max-height: 100% !important;
+  box-sizing: border-box;
+  border-radius: inherit; 
+}
+
+/* En móvil, reduce aún más el margen */
+@media (max-width: 600px) {
+  .mapWrapper {
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+  .mapContainer {
+    width: 98vw;
+    max-width: 100vw;
+    margin: 0 1vw;
+    height: 80%;
+    border-radius: 8px;
+    position: relative;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .floatingSearchBar {
+    min-width: 0 !important;
+    max-width: 94vw !important;
+    width: 92vw !important;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12px;
+    padding: 0.2rem 0.2rem;
+    border-radius: 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+    box-sizing: border-box;
+  }
+
+  .floatingSearchBar input,
+  .floatingSearchBar select {
+    font-size: 0.98rem;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.3rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+    background: #f3f4f6;
+  }
+
+  .floatingSearchBar button {
+    width: 100%;
+    padding: 0.6rem 0;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  .floatingSearchBar, .floatingSearchBar * {
+  box-sizing: border-box;
+}
+
+}

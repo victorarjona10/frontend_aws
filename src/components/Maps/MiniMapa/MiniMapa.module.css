@@ -1,0 +1,7 @@
+.mapContainer {
+  width: 100%; /* Ajusta al ancho del contenedor padre */
+  height: 600px; /* Altura fija del mapa */
+  border-radius: 8px; /* Opcional: bordes redondeados */
+  overflow: hidden; /* Opcional: oculta cualquier desbordamiento */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: sombra para diseño */
+}

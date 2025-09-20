@@ -1,0 +1,317 @@
+{
+    "accessibility": {
+        "title": "Accessibility Options",
+        "button": "Accessibility",
+        "fontSize": "Font size",
+        "fontSizes": {
+            "normal": "Normal",
+            "large": "Large",
+            "xlarge": "Extra large"
+        },
+        "colorMode": "Color mode",
+        "colorModes": {
+            "default": "Default",
+            "dark": "Dark",
+            "highContrast": "High contrast",
+            "protanopia": "Protanopia (red colorblindness)",
+            "deuteranopia": "Deuteranopia (green colorblindness)",
+            "tritanopia": "Tritanopia (blue colorblindness)"
+        },
+        "dyslexicFont": "Dyslexic font",
+        "reducedMotion": "Reduce animations",
+        "language": "Language",
+        "languages": {
+            "es": "Spanish",
+            "en": "English",
+            "ca": "Catalan"
+        },
+        "reset": "Reset settings"
+    },
+    "navbar": {
+        "profile": "Profile",
+        "services": "Services",
+        "map": "Map",
+        "cart": "Cart",
+        "contact": "Contact",
+        "logout": "Logout",
+        "notifications": "Notifications"
+    },
+    "services": {
+        "title": "Why Choose QuickFind?",
+        "description": "QuickFind connects shoppers with local businesses, making it easier to find exactly what you need nearby, saving you time and supporting local commerce.",
+        "scrollForMore": "Scroll for more information",
+        "exploreTitle": "Explore Our Partner Companies",
+        "exploreText": "Discover all the local businesses that are part of our network. From restaurants to specialty stores, we have a wide variety of options to meet your needs.",
+        "viewCompanies": "View Companies",
+        "manageCompanies": "Manage your existing companies",
+        "addCompany": "Add Company",
+        "smartSearch": {
+            "title": "Smart Product Search",
+            "description": "Find products across multiple nearby stores with real-time availability and pricing."
+        },
+        "maps": {
+            "title": "Interactive Maps",
+            "description": "Discover stores on an interactive map with ratings, reviews, and directions."
+        },
+        "localBusiness": {
+            "title": "Local Business Visibility",
+            "description": "We help small businesses increase their visibility and connect with local customers."
+        },
+        "storeManagement": {
+            "title": "Store Management",
+            "description": "Store owners can update information and manage product inventory easily."
+        },
+        "download": {
+            "apple": "Download for iOS",
+            "android": "Download for Android"
+        }
+    },
+    "company": {
+        "management": {
+            "title": "Manage Company",
+            "passwordPrompt": "Please enter the company password to access the management panel",
+            "password": "Password",
+            "verify": "Verify",
+            "cancel": "Cancel",
+            "incorrectPassword": "Incorrect password, please try again",
+            "tabs": {
+                "details": "Details",
+                "products": "Products",
+                "photos": "Photos",
+                "map": "Map",
+                "reviews": "Reviews",
+                "orders": "Orders",
+                "followers": "Followers"
+            }
+        },
+        "form": {
+            "name": "Company Name",
+            "description": "Description",
+            "location": "Location",
+            "email": "Email",
+            "phone": "Phone",
+            "password": "Password (leave empty to keep current)",
+            "update": "Update Company",
+            "create": "Create Company",
+            "cancel": "Cancel",
+            "updating": "Updating...",
+            "creating": "Creating...",
+            "passwordPlaceholder": "Leave empty to keep current password"
+        },
+        "product": {
+            "form": {
+                "title": "Add Product",
+                "name": "Product Name",
+                "description": "Description",
+                "price": "Price",
+                "add": "Add Product",
+                "cancel": "Cancel"
+            },
+            "list": {
+                "title": "Product List",
+                "noProducts": "No products available.",
+                "edit": "Edit",
+                "delete": "Delete",
+                "save": "Save",
+                "cancel": "Cancel"
+            }
+        },
+        "photos": {
+            "title": "Photos",
+            "noPhotos": "No photos uploaded yet.",
+            "upload": "Upload photo",
+            "delete": "Delete photo"
+        },
+        "location": {
+            "title": "Location on map"
+        },
+        "reviews": {
+            "title": "Reviews",
+            "noReviews": "No reviews available."
+        },
+        "orders": {
+            "pending": "Pending Orders",
+            "processing": "Processing Orders",
+            "completed": "Completed Orders",
+            "rejected": "Rejected Orders",
+            "noPending": "No pending orders.",
+            "noProcessing": "No processing orders.",
+            "noCompleted": "No completed orders.",
+            "noRejected": "No rejected orders.",
+            "date": "Date",
+            "user": "User",
+            "products": "Products",
+            "quantity": "Quantity",
+            "total": "Order total",
+            "actions": {
+                "process": "Move to Processing",
+                "complete": "Mark as Completed",
+                "reject": "Reject",
+                "resume": "Resume Order"
+            }
+        },
+        "profile": {
+            "name": "Name",
+            "description": "Description",
+            "email": "Email",
+            "phone": "Phone",
+            "location": "Location",
+            "followers": "Followers",
+            "rating": "Rating",
+            "userRatings": "ratings",
+            "follow": "Follow",
+            "unfollow": "Unfollow"
+        }
+    },
+    "user": {
+        "profile": {
+            "loading": "Loading user data...",
+            "notFound": "No user information found.",
+            "edit": "Edit Profile",
+            "save": "Save Changes",
+            "cancel": "Cancel",
+            "name": "Name",
+            "email": "Email",
+            "phone": "Phone",
+            "description": "Description",
+            "recentOrders": "Recent Orders",
+            "noOrders": "You don't have any recent orders.",
+            "following": "Following",
+            "followers": "Followers",
+            "noFollowing": "You're not following any users.",
+            "noFollowers": "You don't have any followers.",
+            "followedCompanies": "Companies you follow",
+            "noCompanies": "You don't follow any companies."
+        }
+    },
+    "cart": {
+        "title": "Cart",
+        "summary": "Cart Summary",
+        "total": "Total Price",
+        "wallet": "Wallet",
+        "loading": "Loading...",
+        "addMoney": "Add Money",
+        "checkout": "Checkout Now",
+        "empty": "Your cart is empty",
+        "emptyText": "Add products from company pages",
+        "browseCompanies": "Browse Companies",
+        "products": "Products in Cart",
+        "perCompany": "Products from {{company}}",
+        "removeProduct": "Remove",
+        "increaseQuantity": "Add one more",
+        "decreaseQuantity": "Remove one",
+        "price": "Price"
+    },
+    "notifications": {
+        "title": "Notifications",
+        "markAllRead": "Mark all as read",
+        "noNotifications": "You have no notifications",
+        "unread": "Unread"
+    },
+    "addMoney": {
+        "title": "Add Money",
+        "currentBalance": "Current Balance",
+        "amount": "Amount to Add",
+        "add": "Add",
+        "cancel": "Cancel"
+    },
+    "login": {
+        "title": "Login",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Login",
+        "register": "Create Account",
+        "forgotPassword": "Forgot Password?"
+    },
+    "register": {
+        "title": "Create Account",
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "submit": "Register",
+        "login": "Already have an account? Login"
+    },
+    "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Invalid email",
+        "passwordLength": "Password must be at least 6 characters",
+        "passwordMatch": "Passwords do not match",
+        "generic": "An error occurred. Please try again."
+    },
+    "success": {
+        "productAdded": "Product added successfully",
+        "companyUpdated": "Company updated successfully",
+        "orderCreated": "Order created successfully",
+        "reviewSubmitted": "Thank you for your review!"
+    },
+    "common": {
+        "loading": "Loading...",
+        "save": "Save",
+        "cancel": "Cancel",
+        "edit": "Edit",
+        "delete": "Delete",
+        "submit": "Submit",
+        "back": "Back",
+        "next": "Next",
+        "yes": "Yes",
+        "no": "No",
+        "ok": "OK",
+        "close": "Close",
+        "search": "Search",
+        "filter": "Filter",
+        "sort": "Sort",
+        "show": "Show",
+        "hide": "Hide",
+        "view": "View",
+        "add": "Add",
+        "remove": "Remove",
+        "create": "Create",
+        "update": "Update",
+        "price": "Price",
+        "quantity": "Quantity",
+        "total": "Total",
+        "name": "Name",
+        "description": "Description",
+        "image": "Image",
+        "location": "Location",
+        "date": "Date",
+        "status": "Status",
+        "actions": "Actions",
+        "noResults": "No results found",
+        "notAvailable": "Not available",
+        "rights": "All rights reserved."
+    },
+    "home": {
+        "welcome": "Welcome to QuickFind",
+        "subtitle": "Find, compare and connect with local businesses and services.",
+        "exploreButton": "Explore companies",
+        "whatCanYouDo": "What can you do?",
+        "searchCompanies": "Search companies",
+        "searchDescription": "Filter by sector and location.",
+        "compareServices": "Compare services",
+        "compareDescription": "Compare prices, products and real opinions.",
+        "contactEasily": "Easy contact",
+        "contactDescription": "Contact companies directly from the platform.",
+        "stats": "QuickFind in numbers",
+        "companies": "Companies",
+        "users": "Users",
+        "reviews": "Reviews",
+        "finder": "Companies and Products Finder"
+    },
+    "map": {
+        "search2": "Search company",
+        "search1": "Search product",
+        "search3": "Search companies not registered in QuickFind",
+        "noResults": "No results found"
+    },
+    "contact": {
+        "title": "Contact",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Submit",
+        "success": "Message sent successfully. We'll get back to you soon.",
+        "error": "An error occurred while sending your message. Please try again."
+    }
+}

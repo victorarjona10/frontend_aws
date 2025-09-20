@@ -1,0 +1,359 @@
+.companyWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.companyContainer {
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.companyAvatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+
+.companyId {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.companyName {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.companyDescription,
+.companyEmail,
+.companyPhone,
+.companyLocation {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #374151;
+  text-align: left;
+}
+
+.companyInput,
+.companyTextarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.companyTextarea {
+  resize: none;
+  height: 80px;
+}
+
+.companyActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.companyButton {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.companyButton:hover {
+  background-color: #1e3a8a;
+}
+
+.companyRating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #d1d5db; /* Color gris para estrellas vacías */
+}
+
+.filledStar {
+  color: #fbbf24; /* Color amarillo para estrellas llenas */
+}
+
+.ratingDetails {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.companyProducts ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.companyProducts h1 {
+  font-size: 1.6rem;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.photoGallery {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.companyPhoto {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.details {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+  }
+
+
+  .tabContent {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .companyMap {
+    margin-top: 20px;
+    height: 300px;
+  }
+
+
+
+
+
+
+  .profilePage {
+    background-color: white; /* Fondo blanco */
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 1fr 200px 2fr;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del tamaño */
+  }
+
+.sidebar {
+  width: 200px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarButton {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 1rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebarButton:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.sidebarButton.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.content {
+  padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    flex: 3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+.content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+html, body {
+    height: 100%; /* Asegura que ocupen toda la altura */
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Fondo blanco */
+    color: #374151; /* Color del texto */
+    font-family: Arial, sans-serif;
+  }
+
+  .starRatingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    gap: 10px;
+  }
+
+  
+/* Media Query per a pantalles petites */
+@media (max-width: 768px) {
+  .profilePage {
+    flex-direction: column; /* Canvia a disseny vertical */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .details {
+    max-width: 100%; /* Ocupa tot l'ample */
+    text-align: center; /* Centra el contingut */
+  }
+
+
+
+
+  
+
+  .content {
+    max-width: 100%; /* Ocupa tot l'ample */
+  }
+
+  .companyAvatar {
+    width: 120px; /* Redueix la mida de l'avatar */
+    height: 120px;
+    margin: 0 auto; /* Centra l'avatar */
+    display: block;
+  }
+
+  .companyName {
+    font-size: 1.5rem; /* Ajusta la mida del text */
+    margin-top: 10px;
+  }
+
+  .companyDescription,
+  .companyEmail,
+  .companyPhone,
+  .companyLocation,
+  .companyFollowers {
+    font-size: 0.9rem; /* Redueix la mida del text */
+    margin-bottom: 10px;
+  }
+}
+
+.companyAvatar {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.companyPhoto {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Añade o modifica estas reglas */
+
+.tabs {
+  display: flex;
+  flex-direction: column; /* Vertical como en Perfil */
+  border-right: 2px solid #e5e7eb;
+  margin-right: 1rem;
+  padding-right: 1rem;
+  gap: 0; /* Sin separación vertical, igual que Perfil */
+  min-width: 180px; /* Opcional, para que no sean demasiado estrechas */
+}
+
+.tabButton {
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 1rem;
+  color: #374151;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.tabButton:hover {
+  color: #2563eb;
+}
+
+.tabButton.active {
+  border-bottom: 2px solid #2563eb;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* Responsive: cambia a horizontal en móvil si quieres */
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 2px solid #e5e7eb;
+    margin-right: 0;
+    padding-right: 0;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .tabButton {
+    border-bottom: none;
+    border-right: 2px solid transparent;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+  }
+  .tabButton.active {
+    border-right: 2px solid #2563eb;
+    border-bottom: none;
+  }
+}
+
+

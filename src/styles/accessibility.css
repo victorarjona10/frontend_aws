@@ -1,0 +1,125 @@
+/* Importar fuente para dislexia */
+@import '@fontsource/opendyslexic';
+
+/* Variables CSS para todos los modos */
+:root {
+    --text-size-base: 16px;
+    --animation-duration: 0.3s;
+
+    /* Variables que no se aplicarán en modo default */
+    --light-bg-color: #ffffff;
+    --light-text-color: #333333;
+    --light-secondary-color: #2563eb;
+    --light-border-color: #e5e7eb;
+}
+
+/* Tamaños de texto */
+html[data-font-size="normal"] {
+    font-size: var(--text-size-base);
+}
+
+html[data-font-size="large"] {
+    font-size: calc(var(--text-size-base) * 1.25);
+}
+
+html[data-font-size="x-large"] {
+    font-size: calc(var(--text-size-base) * 1.5);
+}
+
+/* Nuevo modo claro explícito */
+html[data-color-mode="light"] {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --secondary-color: #2563eb;
+    --border-color: #e5e7eb;
+}
+
+/* Modo oscuro */
+html[data-color-mode="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --secondary-color: #90caf9;
+    --border-color: #444;
+}
+
+/* Alto contraste */
+html[data-color-mode="high-contrast"] {
+    --bg-color: #000;
+    --text-color: #fff;
+    --secondary-color: #ff0;
+    --border-color: #fff;
+}
+
+/* Filtros para daltonismo */
+html[data-color-mode="protanopia"] {
+    filter: url('#protanopia-filter');
+}
+
+html[data-color-mode="deuteranopia"] {
+    filter: url('#deuteranopia-filter');
+}
+
+html[data-color-mode="tritanopia"] {
+    filter: url('#tritanopia-filter');
+}
+
+/* Aplicación general de colores - EXCEPTO PARA DEFAULT */
+html[data-color-mode]:not([data-color-mode="default"]) {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Aplicación a elementos generales - EXCEPTO PARA DEFAULT */
+html[data-color-mode]:not([data-color-mode="default"]) body,
+html[data-color-mode]:not([data-color-mode="default"]) #root,
+html[data-color-mode]:not([data-color-mode="default"]) main {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Aplicación a elementos comunes de interfaz - EXCEPTO PARA DEFAULT */
+html[data-color-mode]:not([data-color-mode="default"]) div,
+html[data-color-mode]:not([data-color-mode="default"]) section,
+html[data-color-mode]:not([data-color-mode="default"]) header,
+html[data-color-mode]:not([data-color-mode="default"]) footer,
+html[data-color-mode]:not([data-color-mode="default"]) aside,
+html[data-color-mode]:not([data-color-mode="default"]) nav {
+    background-color: inherit;
+    color: inherit;
+}
+
+/* Para tarjetas, paneles y contenedores - EXCEPTO PARA DEFAULT */
+html[data-color-mode]:not([data-color-mode="default"]) .card,
+html[data-color-mode]:not([data-color-mode="default"]) .panel,
+html[data-color-mode]:not([data-color-mode="default"]) .container,
+html[data-color-mode]:not([data-color-mode="default"]) [class*="card"],
+html[data-color-mode]:not([data-color-mode="default"]) [class*="panel"],
+html[data-color-mode]:not([data-color-mode="default"]) [class*="container"] {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* Botones y enlaces - EXCEPTO PARA DEFAULT */
+html[data-color-mode]:not([data-color-mode="default"]) a {
+    color: var(--secondary-color);
+}
+
+html[data-color-mode="high-contrast"] a {
+    text-decoration: underline;
+}
+
+/* Fuente para dislexia */
+.dyslexic-font {
+    font-family: 'OpenDyslexic', sans-serif !important;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    line-height: 1.5;
+}
+
+/* Reducir movimiento */
+.reduced-motion * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+}

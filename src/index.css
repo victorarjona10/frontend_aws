@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevenir scroll fuera de límites */
+  overscroll-behavior: none; /* Versión más estricta que overscroll-behavior-y */
+  background-color: #282c34;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+html, body {
+  /*background: #f5f6fa !important;*/
+  color: #374151;
+}
+
+html {
+  height: 100%;
+  /*background-color: #282c34;*/
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Bloquea completamente el overflow a nivel de HTML */
+}
+
+#root {
+  height: 100%;
+  min-height: 100vh;
+  max-height: 100vh; /* Limita la altura máxima */
+  overflow-y: auto; /* Solo permite scroll dentro de root */
+  /*background-color: #f5f6fa;*/
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

@@ -1,0 +1,281 @@
+.accessibilityOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.accessibilityModal {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
+    border: 1px solid #ddd;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para modos de color */
+html[data-color-mode="dark"] .accessibilityModal {
+    background-color: #222;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+html[data-color-mode="high-contrast"] .accessibilityModal {
+    background-color: #000;
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+/* Filtros para daltonismo - siempre mantienen la opacidad del modal */
+html[data-color-mode="protanopia"] .accessibilityModal,
+html[data-color-mode="deuteranopia"] .accessibilityModal,
+html[data-color-mode="tritanopia"] .accessibilityModal {
+    background-color: #fff;
+    border: 1px solid #444;
+}
+
+.accessibilityPanelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+    background-color: inherit;
+}
+
+.accessibilityPanelHeader h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+html[data-color-mode="dark"] .accessibilityPanelHeader h2 {
+    color: #90caf9;
+}
+
+html[data-color-mode="high-contrast"] .accessibilityPanelHeader h2 {
+    color: #ff0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -8px;
+    transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+    background-color: #f5f5f5;
+}
+
+html[data-color-mode="dark"] .closeButton:hover {
+    background-color: #333;
+}
+
+.accessibilityPanelContent {
+    padding: 16px 20px;
+    background-color: inherit;
+}
+
+.accessibilityOption {
+    margin-bottom: 20px;
+}
+
+.accessibilityOption label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+html[data-color-mode="dark"] .accessibilityOption label {
+    color: #ccc;
+}
+
+.accessibilitySelect select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 14px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 30px;
+}
+
+html[data-color-mode="dark"] .accessibilitySelect select {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.accessibilityCheckbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accessibilityCheckbox input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+}
+
+html[data-color-mode="dark"] .accessibilityCheckbox input[type="checkbox"] {
+    accent-color: #90caf9;
+}
+
+.accessibilityLanguageButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.accessibilityLanguageButtons button {
+    flex: 1;
+    padding: 10px 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.accessibilityLanguageButtons button:hover {
+    background: #e9e9e9;
+}
+
+.accessibilityLanguageButtons button.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+html[data-color-mode="dark"] .accessibilityLanguageButtons button {
+    background: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+html[data-color-mode="dark"] .accessibilityLanguageButtons button:hover {
+    background: #444;
+}
+
+html[data-color-mode="dark"] .accessibilityLanguageButtons button.active {
+    background: #90caf9;
+    color: #000;
+    border-color: #90caf9;
+}
+
+.accessibilityResetButton {
+    width: 100%;
+    padding: 12px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background 0.2s;
+    font-weight: 500;
+}
+
+.accessibilityResetButton:hover {
+    background: #e0e0e0;
+}
+
+html[data-color-mode="dark"] .accessibilityResetButton {
+    background: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+html[data-color-mode="dark"] .accessibilityResetButton:hover {
+    background: #444;
+}
+
+/* Estilos para modo de alto contraste */
+html[data-color-mode="high-contrast"] .accessibilitySelect select,
+html[data-color-mode="high-contrast"] .accessibilityLanguageButtons button,
+html[data-color-mode="high-contrast"] .accessibilityResetButton {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+html[data-color-mode="high-contrast"] .accessibilityLanguageButtons button.active {
+    background: #ff0;
+    color: #000;
+    border-color: #fff;
+    font-weight: bold;
+}
+
+/* Asegurar compatibilidad con los filtros de daltonismo */
+html[data-color-mode="protanopia"] .accessibilityOverlay,
+html[data-color-mode="deuteranopia"] .accessibilityOverlay,
+html[data-color-mode="tritanopia"] .accessibilityOverlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+html[data-color-mode="protanopia"] .accessibilityLanguageButtons button.active,
+html[data-color-mode="deuteranopia"] .accessibilityLanguageButtons button.active,
+html[data-color-mode="tritanopia"] .accessibilityLanguageButtons button.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .accessibilityModal {
+        width: 95%;
+        max-height: 80vh;
+    }
+}

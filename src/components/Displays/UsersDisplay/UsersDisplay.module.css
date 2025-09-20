@@ -1,0 +1,61 @@
+.perfilDisplayContainer {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.perfilDisplayContainer h3 {
+  color: #2563eb;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.userAvatar {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 1rem;
+  object-fit: cover;
+  width: 50px;
+}
+
+.userEmail {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userItem {
+  align-items: center;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.userItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.userList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.userName {
+  color: #374151;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
