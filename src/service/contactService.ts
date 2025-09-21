@@ -43,7 +43,7 @@ export const sendFeedback = async (formData: FeedbackFormData) => {
 
     // Enviar la petición al servidor
     const response = await axios.post(
-      '/api/feedback',
+      'http://localhost:40000/api/feedback',
       feedbackData,
       {
         headers: {

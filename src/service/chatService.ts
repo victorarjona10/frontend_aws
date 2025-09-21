@@ -133,7 +133,7 @@ export const loadMessagesFromRest = async (roomId: string) => {
     const token = localStorage.getItem('token');
 
     const response = await fetch(
-      `/api/chat/messages/${roomId}`,
+      `http://localhost:40000/api/chat/messages/${roomId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

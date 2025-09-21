@@ -1,7 +1,7 @@
 import { User } from '../models/User';
 import api from './axiosInstance';
 
-const apiURL = '/api/users';
+const apiURL = 'http://localhost:40000/api/users';
 
 export const logInUser = async (
   email: string,
