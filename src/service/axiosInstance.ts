@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://edu:4000/api', // Base URL de tu API
+  baseURL: '', // Base URL de tu API
 });
 
 let isRefreshing = false; // Lock para evitar múltiples solicitudes de refresh
