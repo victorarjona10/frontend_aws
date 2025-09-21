@@ -4,7 +4,7 @@ import { Product } from '../models/Product';
 import { IReview } from '../models/Review';
 import { Order } from '../models/Order';
 
-const apiURL = 'http://miapi:40000/api/company';
+const apiURL = '/api/company';
 
 export const GetAllCompanies = async (): Promise<Company[]> => {
   try {
@@ -53,7 +53,7 @@ export const CreateProduct = async (productData: any): Promise<Product> => {
       rating: 0, // Añadir el rating como campo con valor 0
     };
     const response = await api.post(
-      `http://miapi:40000/api/products`,
+      `/api/products`,
       completeProductData,
     );
 
@@ -110,7 +110,7 @@ export const GetUserCompanies = async (userId: string): Promise<Company[]> => {
     // NOTA: Aquí está la URL que podría necesitar corrección
     // Debería ser /api/users/companies/:id o /api/companies/:id según tu backend
     const response = await api.get<Company[]>(
-      `http://miapi:40000/api/users/companies/${userId}`,
+      `/api/users/companies/${userId}`,
     );
 
     if (response.status !== 200) {

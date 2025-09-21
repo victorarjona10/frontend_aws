@@ -13,7 +13,7 @@ export const initializeChatSocket = (token?: string, userId?: string) => {
   if (isInitialized) return;
 
   try {
-    socket = io('http://miapi:40000/chat', {
+    socket = io('/chat', {
       withCredentials: true,
       auth: { token, userId },
       transports: ['websocket'],
@@ -133,7 +133,7 @@ export const loadMessagesFromRest = async (roomId: string) => {
     const token = localStorage.getItem('token');
 
     const response = await fetch(
-      `http://miapi:40000/api/chat/messages/${roomId}`,
+      `/api/chat/messages/${roomId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

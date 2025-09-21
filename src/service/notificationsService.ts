@@ -7,7 +7,7 @@ import api from './axiosInstance';
 let socket: Socket | null = null;
 let isInitialized = false;
 let currentUserId: string | null = null;
-const apiUrl = 'http://miapi:40000/api';
+const apiUrl = '/api';
 // Callbacks para eventos de notificaciones
 const notificationCallbacks: ((notification: Notification) => void)[] = [];
 
@@ -15,7 +15,7 @@ const notificationCallbacks: ((notification: Notification) => void)[] = [];
 export const initializeSocket = () => {
   if (isInitialized) return;
 
-  socket = io('http://miapi:40000/', {
+  socket = io('/', {
     withCredentials: true,
     transports: ['websocket'],
   });

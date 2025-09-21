@@ -61,7 +61,7 @@ api.interceptors.response.use(
               refreshToken,
             );
             const { data } = await axios.post(
-              'http://miapi:40000/api/users/auth/refresh',
+              '/api/users/auth/refresh',
               {
                 refreshToken,
               },

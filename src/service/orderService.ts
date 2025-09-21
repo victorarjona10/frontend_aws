@@ -1,7 +1,7 @@
 import { IOrder, Order } from '../models/Order';
 import api from './axiosInstance';
 
-const apiURL = 'http://miapi:40000/api/orders';
+const apiURL = '/api/orders';
 
 export const getOrdersByUserId = async (userId: string): Promise<IOrder[]> => {
   try {
