@@ -2,7 +2,7 @@ import { I } from 'framer-motion/dist/types.d-DDSxwf0n';
 import { IProduct } from '../models/Product';
 import api from './axiosInstance';
 
-const apiURL = 'http://localhost:40000/api/products';
+const apiURL = '/api/products';
 export const CreateProduct = async (
   productData: IProduct,
 ): Promise<IProduct> => {

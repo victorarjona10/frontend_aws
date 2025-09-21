@@ -86,7 +86,7 @@ const Login: React.FC = () => {
   }, [navigate]);
 
   const loginWithGoogle = () => {
-    const googleAuthUrl = 'http://localhost:40000/api/users/auth/google';
+    const googleAuthUrl = '/api/users/auth/google';
     const width = 500;
     const height = 600;
     const left = (window.screen.width - width) / 2;
